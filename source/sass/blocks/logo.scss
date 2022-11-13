@@ -3,6 +3,7 @@
 }
 
 .logo__image {
+  display: block;
   fill: $color-alice-blue;
 
   @include vp-1023 {

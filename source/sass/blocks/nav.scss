@@ -1,7 +1,6 @@
 .nav__list {
   margin: 0;
   padding: 0;
-  padding-bottom: 5px;
   display: grid;
   grid-template-columns: repeat(4, auto);
   gap: 33px;
@@ -15,7 +14,6 @@
     display: none;
     grid-template-columns: 1fr;
     gap: 10px;
-    padding-bottom: 0;
   }
 }
 
@@ -26,6 +24,7 @@
   line-height: 20px;
   color: $color-alice-blue;
   cursor: pointer;
+  transition: color $trans-default;
 
   @include hover-focus {
     color: $color-tangaroa-opacity;
