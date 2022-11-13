@@ -20,6 +20,28 @@ window.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+const menuContainer = document.querySelector('.burger');
+const menu = menuContainer.querySelector('.burger__list');
+const toggle = menuContainer.querySelector('.burger__toggle');
+const closingMenu = menuContainer.querySelector('.burger__close');
+
+menu.classList.remove('burger__list--nojs');
+toggle.classList.remove('burger__toggle--nojs');
+
+if (menuContainer) {
+  const toggleMenu = () => {
+    menuContainer.classList.toggle('burger--open');
+  };
+
+  const removeMenu = () => {
+    menuContainer.classList.remove('burger--open');
+  };
+
+  toggle.addEventListener('click', toggleMenu);
+  closingMenu.addEventListener('click', removeMenu);
+}
+
+
 // ---------------------------------
 
 // ❗❗❗ обязательно установите плагины eslint, stylelint, editorconfig в редактор кода.

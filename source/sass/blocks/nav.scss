@@ -1,0 +1,46 @@
+.nav__list {
+  margin: 0;
+  padding: 0;
+  padding-bottom: 5px;
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  gap: 33px;
+  list-style-type: none;
+
+  @include vp-1023 {
+    gap: 23px;
+  }
+
+  @include vp-767 {
+    display: none;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding-bottom: 0;
+  }
+}
+
+.nav__link {
+  display: block;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  color: $color-alice-blue;
+  cursor: pointer;
+
+  @include hover-focus {
+    color: $color-tangaroa-opacity;
+  }
+
+  @include vp-1023 {
+    font-size: 14px;
+    line-height: 17px;
+  }
+
+  @include vp-767 {
+    padding: 10px;
+    padding-bottom: 8px;
+    font-size: 18px;
+    line-height: 22px;
+    color: $color-tangaroa;
+  }
+}

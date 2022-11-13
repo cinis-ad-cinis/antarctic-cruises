@@ -1,0 +1,130 @@
+.burger {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+
+  &--open {
+    @include vp-767 {
+      position: fixed;
+      flex-direction: column;
+      height: 100vh;
+      width: 100%;
+      border-left: 35px solid transparent;
+      background-color: rgba(0, 43, 102, 0.5);
+
+      & .burger__image {
+        fill: $color-tangaroa;
+      }
+
+      & .burger__close {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: transparent;
+        z-index: -2;
+      }
+
+      & .burger__wrapper {
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 75px 30px 15px 15px;
+        width: 100%;
+        height: 100vh;
+        background-color: $color-alice-blue;
+        z-index: -2;
+      }
+
+      & .burger__toggle {
+        position: absolute;
+        top: 25px;
+        right: 15px;
+        cursor: pointer;
+
+        &::before,
+        &::after {
+          content: "";
+          position: absolute;
+          top: 5px;
+          left: 9px;
+          width: 18px;
+          height: 2px;
+          background-color: $color-tangaroa;
+        }
+
+        &::before {
+          transform: rotate(45deg);
+        }
+
+        &::after {
+          transform: rotate(-45deg);
+        }
+      }
+
+      & .burger__list {
+        display: grid;
+      }
+    }
+  }
+}
+
+.burger__close {
+  display: none;
+}
+
+.burger__logo {
+  @include vp-767 {
+    align-self: flex-start;
+  }
+}
+
+.burger__toggle {
+  display: none;
+
+  @include vp-767 {
+    position: relative;
+    display: block;
+    width: 24px;
+    height: 14px;
+    margin-left: auto;
+    border: none;
+    background-color: transparent;
+    align-self: center;
+    z-index: 2;
+    cursor: pointer;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -4px;
+    left: 0;
+    width: 24px;
+    height: 2px;
+    background-color: $color-alice-blue;
+    box-shadow: 0 6px 0 0 $color-alice-blue, 0 12px 0 0 $color-alice-blue;
+  }
+
+  &--nojs {
+    @include vp-767 {
+      display: none;
+    }
+  }
+}
+
+.burger__list {
+  &--nojs {
+    @include vp-767 {
+      display: grid;
+    }
+
+    & .nav__link {
+      @include vp-767 {
+        color: $color-alice-blue;
+      }
+    }
+  }
+}
