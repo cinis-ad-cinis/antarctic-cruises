@@ -11,10 +11,12 @@
   <body>
     <div class="wrapper">
       <header class="header">
+        <div class="header__bg-wrapper">
           <picture>
             <source type="image/webp" srcset="./img/intro-bg.webp 1x, ./img/intro-bg@2x.webp 2x">
             <img class="header__background" src="./img/intro-bg.jpg" srcset="./img/intro-bg@2x.jpg" width="1366" height="1025" alt="Пейзаж с ледниками Антарктики.">
           </picture>
+        </div>
 
         <div class="burger">
           <div class="burger__close"></div>
@@ -38,7 +40,7 @@
                     <a class="nav__link" href="#advantages">Преимущества</a>
                   </li>
                   <li class="nav__item">
-                    <a class="nav__link" href="#jorney">Направления</a>
+                    <a class="nav__link" href="#journey">Направления</a>
                   </li>
                   <li class="nav__item">
                     <a class="nav__link" href="#cruises">Ближайшие круизы</a>
@@ -61,7 +63,20 @@
 
 
       <main>
+        <section class="journey" id="journey">
+          <div class="journey__container container">
+            <div class="journey__wrapper">
+              <h2>Путешествие на&nbsp;край Земли</h2>
+              <p>Это волшебное путешествие поможет вам познакомиться поближе с&nbsp;удивительным миром Антарктики. Наш круизный лайнер отвезет вас на&nbsp;край Земли, где вы&nbsp;сможете увидеть: ледяные айсберги, несколько видов пингвинов, китов, морских котиков и&nbsp;многое другое.</p>
+            </div>
+            <picture>
+              <source type="image/webp" srcset="./img/penguins.webp 1x, ./img/penguins@2x.webp 2x">
+              <img class="journey__image" src="./img/penguins.jpg" srcset="./img/penguins@2x.jpg" width="560" height="301" alt="Фотография трёх пингвинов на снежном склоне.">
+            </picture>
+          </div>
+        </section>
       </main>
+
       <footer class="footer">
         <div class="footer__container container">
           <div class="footer__logo logo">
@@ -78,7 +93,7 @@
               <a class="footer__link" href="#advantages">Преимущества</a>
             </li>
             <li class="footer__item">
-              <a class="footer__link" href="#jorney">Направления</a>
+              <a class="footer__link" href="#journey">Направления</a>
             </li>
             <li class="footer__item">
               <a class="footer__link" href="#cruises">Ближайшие круизы</a>

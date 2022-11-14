@@ -446,6 +446,7 @@ body {
   width: 100%;
   height: 100%;
   background-color: #ffffff;
+  color: #011c40;
 }
 
 a {
@@ -785,7 +786,7 @@ button,
   overflow: hidden;
 }
 
-.header__background {
+.header__bg-wrapper {
   position: absolute;
   top: 0;
   left: 0;
@@ -793,6 +794,12 @@ button,
   display: block;
   min-width: 100%;
   min-height: 100%;
+}
+
+.header__background {
+  display: block;
+  width: 100%;
+  height: 100%;
   height: 650px;
   -o-object-fit: cover;
   object-fit: cover;
@@ -971,7 +978,7 @@ button,
 
 .promo__wrapper {
   padding-top: 196px;
-  padding-bottom: 279px;
+  padding-bottom: 278px;
   padding-left: 95px;
 }
 
@@ -991,6 +998,40 @@ button,
   line-height: 24px;
   color: #f9fbfd;
   text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.journey__container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 560px;
+  grid-template-columns: 1fr 560px;
+  gap: 88px;
+  padding-top: 120px;
+  padding-bottom: 145px;
+}
+
+.journey__wrapper {
+  -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
+  align-self: center;
+}
+
+.journey h2 {
+  margin-top: 0;
+  margin-bottom: 24px;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 150%;
+}
+
+.journey p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 150%;
+}
+
+.journey__image {
+  display: block;
 }
 
 /* @mixin hover-focus {
@@ -1042,6 +1083,10 @@ button,
   .header {
     -webkit-box-shadow: initial;
     box-shadow: initial;
+  }
+
+  .header__bg-wrapper {
+    height: 638px;
   }
 
   .header__background {
@@ -1116,6 +1161,35 @@ button,
     line-height: 22px;
     text-shadow: none;
   }
+
+  .journey__container {
+    -ms-grid-columns: (1fr)[2];
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  .journey__wrapper {
+    -ms-flex-item-align: start;
+    align-self: flex-start;
+  }
+
+  .journey h2 {
+    margin-top: -9px;
+    margin-bottom: 14px;
+    padding-right: 50px;
+    font-size: 26px;
+    line-height: 140%;
+  }
+
+  .journey p {
+    padding-right: 5px;
+  }
+
+  .journey__image {
+    width: 324px;
+  }
 }
 
 @media (max-width: 767px) {
@@ -1134,6 +1208,15 @@ button,
 
   .modal--fit-content .modal__content {
     width: 100%;
+  }
+
+  .header__bg-wrapper {
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    width: 758px;
+    height: 568px;
   }
 
   .header__background {
@@ -1320,6 +1403,31 @@ button,
     width: 70%;
     font-size: 16px;
     line-height: 140%;
+  }
+
+  .journey__container {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    gap: 44px;
+    padding-top: 56px;
+    padding-bottom: 85px;
+  }
+
+  .journey h2 {
+    margin-top: 0;
+    font-size: 24px;
+  }
+
+  .journey__image {
+    width: 290px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 374px) {
+  .header__background {
+    -o-object-position: 20px;
+    object-position: 20px;
   }
 }
 

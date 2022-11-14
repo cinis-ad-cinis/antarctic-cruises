@@ -1,0 +1,73 @@
+.journey__container {
+  display: grid;
+  grid-template-columns: 1fr 560px;
+  gap: 88px;
+  padding-top: 120px;
+  padding-bottom: 145px;
+
+  @include vp-1023 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  @include vp-767 {
+    grid-template-columns: 1fr;
+    gap: 44px;
+    padding-top: 56px;
+    padding-bottom: 85px;
+  }
+}
+
+.journey__wrapper {
+  align-self: center;
+
+  @include vp-1023 {
+    align-self: flex-start;
+  }
+}
+
+.journey h2 {
+  margin-top: 0;
+  margin-bottom: 24px;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 150%;
+
+  @include vp-1023 {
+    margin-top: -9px;
+    margin-bottom: 14px;
+    padding-right: 50px;
+    font-size: 26px;
+    line-height: 140%;
+  }
+
+  @include vp-767 {
+    margin-top: 0;
+    font-size: 24px;
+  }
+}
+
+.journey p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 150%;
+
+  @include vp-1023 {
+    padding-right: 5px;
+  }
+}
+
+.journey__image {
+  display: block;
+
+  @include vp-1023 {
+    width: 324px;
+  }
+
+  @include vp-767 {
+    width: 290px;
+    margin: 0 auto;
+  }
+}
