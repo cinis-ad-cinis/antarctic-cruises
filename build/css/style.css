@@ -560,6 +560,10 @@ button,
   appearance: none;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .wrapper {
   position: relative;
   display: -webkit-box;
@@ -1034,6 +1038,100 @@ button,
   display: block;
 }
 
+.advantages {
+  position: relative;
+  overflow: hidden;
+}
+
+.advantages__bg-wrapper {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  min-height: 100%;
+  background-color: #e3ecf6;
+  z-index: -1;
+}
+
+.advantages__background {
+  display: block;
+  min-width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  opacity: 0.1;
+}
+
+.advantages__container {
+  padding-top: 109px;
+  padding-bottom: 120px;
+}
+
+.advantages h2 {
+  margin-top: 0;
+  margin-bottom: 50px;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 150%;
+  text-align: center;
+}
+
+.advantages__list {
+  margin: 0;
+  padding: 0;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  list-style-type: none;
+}
+
+.advantages__item {
+  position: relative;
+  padding: 80px 30px 46px 30px;
+  background-color: #f9fbfd;
+}
+
+.advantages__item::before {
+  content: "";
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  height: 32px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.advantages__item--ship::before {
+  width: 27px;
+  background-image: url("../img/sprite/ship.svg");
+}
+
+.advantages__item--tick::before {
+  width: 38px;
+  background-image: url("../img/sprite/tick.svg");
+}
+
+.advantages__item--boat::before {
+  width: 44px;
+  background-image: url("../img/sprite/boat.svg");
+}
+
+.advantages h3 {
+  margin-top: 0;
+  margin-bottom: 9px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 150%;
+}
+
+.advantages p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 140%;
+}
+
 /* @mixin hover-focus {
     @media (hover: hover) {
       &:hover:not(.focus-visible) {
@@ -1189,6 +1287,10 @@ button,
 
   .journey__image {
     width: 324px;
+  }
+
+  .advantages__container {
+    padding-top: 90px;
   }
 }
 
