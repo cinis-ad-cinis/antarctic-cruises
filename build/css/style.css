@@ -795,7 +795,6 @@ html {
   top: 0;
   left: 0;
   z-index: -1;
-  display: block;
   min-width: 100%;
   min-height: 100%;
 }
@@ -1053,9 +1052,11 @@ html {
 }
 
 .advantages__background {
+  position: absolute;
   display: block;
   min-width: 100%;
-  height: 100%;
+  height: 562px;
+  min-height: 100%;
   -o-object-fit: cover;
   object-fit: cover;
   opacity: 0.1;
@@ -1123,13 +1124,13 @@ html {
   margin-bottom: 9px;
   font-weight: 500;
   font-size: 18px;
-  line-height: 150%;
+  line-height: 25px;
 }
 
 .advantages p {
   margin: 0;
   font-size: 14px;
-  line-height: 140%;
+  line-height: 20px;
 }
 
 /* @mixin hover-focus {
@@ -1265,7 +1266,7 @@ html {
     grid-template-columns: repeat(2, 1fr);
     gap: 25px;
     padding-top: 100px;
-    padding-bottom: 100px;
+    padding-bottom: 94px;
   }
 
   .journey__wrapper {
@@ -1289,8 +1290,47 @@ html {
     width: 324px;
   }
 
+  .advantages__background {
+    height: 588px;
+  }
+
   .advantages__container {
     padding-top: 90px;
+    padding-bottom: 100px;
+  }
+
+  .advantages h2 {
+    font-size: 26px;
+  }
+
+  .advantages__list {
+    gap: 30px;
+  }
+
+  .advantages__item {
+    padding: 70px 15px 21px 20px;
+  }
+
+  .advantages__item::before {
+    top: 26px;
+    left: 20px;
+    height: 26px;
+  }
+
+  .advantages__item--ship::before {
+    width: 21px;
+  }
+
+  .advantages__item--tick::before {
+    width: 27px;
+  }
+
+  .advantages__item--boat::before {
+    width: 36px;
+  }
+
+  .advantages h3 {
+    font-size: 18px;
   }
 }
 
@@ -1523,6 +1563,35 @@ html {
   .journey__image {
     width: 290px;
     margin: 0 auto;
+  }
+
+  .advantages__bg-wrapper {
+    height: 997px;
+  }
+
+  .advantages__background {
+    height: 997px;
+    -o-object-position: -10px;
+    object-position: -10px;
+  }
+
+  .advantages__container {
+    padding-top: 56px;
+    padding-bottom: 65px;
+  }
+
+  .advantages h2 {
+    margin-bottom: 31px;
+    font-size: 24px;
+  }
+
+  .advantages__list {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
+
+  .advantages h3 {
+    padding-right: 60px;
   }
 }
 
