@@ -1,0 +1,50 @@
+.cruises__container {
+  padding-top: 84px;
+  padding-bottom: 120px;
+
+  @include vp-1023 {
+    padding-top: 90px;
+  }
+
+  @include vp-767 {
+    padding-top: 56px;
+  }
+}
+
+.cruises__list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  margin: 0;
+  padding: 0 15px;
+  list-style-type: none;
+
+  @include vp-1023 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include vp-767 {
+    grid-template-columns: 1fr;
+    padding: 0 10px;
+  }
+}
+
+
+.cruises h2 {
+  margin-top: 0;
+  margin-bottom: 50px;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 150%;
+  text-align: center;
+
+  @include vp-1023 {
+    font-size: 26px;
+    margin-bottom: 49px;
+  }
+
+  @include vp-767 {
+    font-size: 24px;
+    margin-bottom: 31px;
+  }
+}

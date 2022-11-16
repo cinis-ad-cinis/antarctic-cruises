@@ -1089,7 +1089,7 @@ html {
 
 .advantages__item {
   position: relative;
-  padding: 80px 30px 46px 30px;
+  padding: 80px 30px 47px 30px;
   background-color: #f9fbfd;
 }
 
@@ -1131,6 +1131,138 @@ html {
   margin: 0;
   font-size: 14px;
   line-height: 20px;
+}
+
+.cruises__container {
+  padding-top: 84px;
+  padding-bottom: 120px;
+}
+
+.cruises__list {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  margin: 0;
+  padding: 0 15px;
+  list-style-type: none;
+}
+
+.cruises h2 {
+  margin-top: 0;
+  margin-bottom: 50px;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 150%;
+  text-align: center;
+}
+
+.card {
+  position: relative;
+  min-height: 386px;
+  overflow: hidden;
+}
+
+.card__bg-wrapper {
+  position: absolute;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+}
+
+.card__background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  min-width: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  background-color: #011c40;
+}
+
+.card__description {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  padding: 28px 25px 35px;
+  background-color: #011c40;
+  z-index: -2;
+}
+
+.card h3 {
+  position: absolute;
+  bottom: 23px;
+  left: 30px;
+  margin: 0;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 150%;
+  color: #f9fbfd;
+}
+
+.card p {
+  margin: 0;
+  margin-bottom: 13px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 150%;
+  color: #f9fbfd;
+}
+
+.card dl {
+  margin: 0;
+}
+
+.card dt {
+  margin-bottom: 1px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: #f9fbfd;
+}
+
+.card dd {
+  margin: 0;
+  margin-bottom: 11px;
+  font-size: 14px;
+  line-height: 20px;
+  color: #d8d8d9;
+}
+
+.card dd:last-child {
+  margin-bottom: 0;
+}
+
+.card__button {
+  margin-top: auto;
+  display: block;
+  padding: 9px 10px 10px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 150%;
+  text-align: center;
+  background-color: #f9fbfd;
+  -webkit-transition: background-color, -webkit-box-shadow 0.3s ease;
+  transition: background-color, -webkit-box-shadow 0.3s ease;
+  -o-transition: background-color, box-shadow 0.3s ease;
+  transition: background-color, box-shadow 0.3s ease;
+  transition: background-color, box-shadow 0.3s ease, -webkit-box-shadow 0.3s ease;
+}
+
+.card__button.focus-visible:focus {
+  color: #f9fbfd;
+  background-color: transparent;
+  -webkit-box-shadow: 0 0 0 2px #f9fbfd inset;
+  box-shadow: 0 0 0 2px #f9fbfd inset;
 }
 
 /* @mixin hover-focus {
@@ -1331,6 +1463,35 @@ html {
 
   .advantages h3 {
     font-size: 18px;
+  }
+
+  .cruises__container {
+    padding-top: 90px;
+  }
+
+  .cruises__list {
+    -ms-grid-columns: (1fr)[2];
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cruises h2 {
+    font-size: 26px;
+    margin-bottom: 49px;
+  }
+
+  .card__background {
+    width: 309px;
+    height: 386px;
+  }
+
+  .card__description {
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+
+  .card h3 {
+    bottom: 28px;
+    left: 35px;
   }
 }
 
@@ -1593,6 +1754,31 @@ html {
   .advantages h3 {
     padding-right: 60px;
   }
+
+  .cruises__container {
+    padding-top: 56px;
+  }
+
+  .cruises__list {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    padding: 0 10px;
+  }
+
+  .cruises h2 {
+    font-size: 24px;
+    margin-bottom: 31px;
+  }
+
+  .card__description {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+  .card h3 {
+    bottom: 18px;
+    left: 25px;
+  }
 }
 
 @media (max-width: 374px) {
@@ -1617,5 +1803,16 @@ html {
 
   .social__link:hover:not(.focus-visible) {
     opacity: 0.6;
+  }
+
+  .card:hover:not(.focus-visible) .card__description {
+    z-index: auto;
+  }
+
+  .card__button:hover:not(.focus-visible) {
+    color: #f9fbfd;
+    background-color: transparent;
+    -webkit-box-shadow: 0 0 0 2px #f9fbfd inset;
+    box-shadow: 0 0 0 2px #f9fbfd inset;
   }
 }
