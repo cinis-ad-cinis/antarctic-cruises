@@ -6,6 +6,10 @@
   @include vp-1023 {
     box-shadow: initial;
   }
+
+  @include vp-767 {
+    min-height: 500px;
+  }
 }
 
 .header__bg-wrapper {
@@ -46,6 +50,12 @@
 
   @include vp-374 {
     object-position: 20px;
+  }
+
+  &--nojs {
+    @include vp-767 {
+      height: 100%;
+    }
   }
 }
 

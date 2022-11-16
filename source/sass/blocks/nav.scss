@@ -11,7 +11,6 @@
   }
 
   @include vp-767 {
-    display: none;
     grid-template-columns: 1fr;
     gap: 10px;
   }
@@ -24,10 +23,10 @@
   line-height: 20px;
   color: $color-alice-blue;
   cursor: pointer;
-  transition: color $trans-default;
+  transition: opacity $trans-default;
 
   @include hover-focus {
-    color: $color-tangaroa-opacity;
+    opacity: 0.6;
   }
 
   @include vp-1023 {

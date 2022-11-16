@@ -22,23 +22,28 @@ window.addEventListener('DOMContentLoaded', () => {
 
 const menuContainer = document.querySelector('.burger');
 const menu = menuContainer.querySelector('.burger__list');
+const links = document.querySelectorAll('.nav__link');
 const toggle = menuContainer.querySelector('.burger__toggle');
 const closingMenu = menuContainer.querySelector('.burger__close');
 
 menu.classList.remove('burger__list--nojs');
 toggle.classList.remove('burger__toggle--nojs');
+document.querySelector('.header__background').classList.remove('header__background--nojs');
 
 if (menuContainer) {
   const toggleMenu = () => {
     menuContainer.classList.toggle('burger--open');
+    document.body.classList.toggle('scroll-lock');
   };
 
   const removeMenu = () => {
     menuContainer.classList.remove('burger--open');
+    document.body.classList.remove('scroll-lock');
   };
 
   toggle.addEventListener('click', toggleMenu);
   closingMenu.addEventListener('click', removeMenu);
+  links.forEach((el) => el.addEventListener('click', removeMenu));
 }
 
 

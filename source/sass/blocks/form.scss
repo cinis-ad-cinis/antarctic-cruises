@@ -1,0 +1,135 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  max-width: 403px;
+  padding: 50px;
+  padding-top: 43px;
+  background-color: $color-tangaroa;
+
+  @include vp-767 {
+    max-width: 100%;
+    padding: 34px 30px 40px;
+  }
+}
+
+.form h3 {
+  margin-top: 0;
+  margin-bottom: 28px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+  color: $color-alice-blue;
+
+  @include vp-767 {
+    margin-bottom: 29px;
+    padding: 0 8px;
+    text-align: center;
+    line-height: 25px;
+  }
+}
+
+.form input {
+  margin-bottom: 20px;
+  padding: 11px 16px;
+  font-size: 14px;
+  line-height: 21px;
+  color: $color-tangaroa;
+  background-color: $color-alice-blue;
+  border: none;
+
+  &::placeholder {
+    color: $color-tangaroa-opacity;
+  }
+}
+
+.form__checkbox label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  font-size: 10px;
+  line-height: 13px;
+  color: $color-alice-blue;
+
+  @include vp-767 {
+    margin-bottom: 27px;
+    padding-right: 45px;
+    line-height: 12px;
+  }
+}
+
+.form__checkbox input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  border: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(100%);
+
+  &:checked + .form__control-mark {
+    &::before {
+      display: block;
+    }
+  }
+
+  @include focus {
+    & + .form__control-mark {
+      box-shadow: 0 0 0 1px $color-tangaroa inset;
+      outline: 1px solid $color-quartz;
+    }
+  }
+}
+
+.form__control-mark {
+  position: relative;
+  width: 18px;
+  height: 18px;
+  margin-right: 5px;
+  flex-shrink: 0;
+  background-color: $color-alice-blue;
+
+  @include vp-767 {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    width: 12px;
+    height: 8px;
+    background-image: url("../img/sprite/checkbox.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+}
+
+.form button {
+  display: block;
+  padding: 10px;
+  padding-bottom: 12px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 21px;
+  text-align: center;
+  border: none;
+  color: $color-tangaroa;
+  cursor: pointer;
+  transition: background-color, box-shadow $trans-default;
+
+
+  @include hover-focus {
+    color: $color-alice-blue;
+    background-color: transparent;
+    box-shadow: 0 0 0 2px $color-alice-blue inset;
+  }
+}

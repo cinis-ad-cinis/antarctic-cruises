@@ -842,13 +842,13 @@ html {
   line-height: 20px;
   color: #f9fbfd;
   cursor: pointer;
-  -webkit-transition: color 0.3s ease;
-  -o-transition: color 0.3s ease;
-  transition: color 0.3s ease;
+  -webkit-transition: opacity 0.3s ease;
+  -o-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
 }
 
 .nav__link.focus-visible:focus {
-  color: rgba(1, 28, 64, 0.7);
+  opacity: 0.6;
 }
 
 .logo__link {
@@ -1196,6 +1196,13 @@ html {
   padding: 28px 25px 35px;
   background-color: #011c40;
   z-index: -2;
+  overflow: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.card__description::-webkit-scrollbar {
+  display: none;
 }
 
 .card h3 {
@@ -1245,7 +1252,8 @@ html {
 .card__button {
   margin-top: auto;
   display: block;
-  padding: 9px 10px 10px;
+  padding: 10px;
+  padding-top: 9px;
   font-weight: 600;
   font-size: 14px;
   line-height: 150%;
@@ -1259,6 +1267,209 @@ html {
 }
 
 .card__button.focus-visible:focus {
+  color: #f9fbfd;
+  background-color: transparent;
+  -webkit-box-shadow: 0 0 0 2px #f9fbfd inset;
+  box-shadow: 0 0 0 2px #f9fbfd inset;
+}
+
+.booking {
+  position: relative;
+  overflow: hidden;
+}
+
+.booking__bg-wrapper {
+  position: absolute;
+  width: 100%;
+  min-height: 100%;
+  height: 575px;
+  background-color: #e3ecf6;
+  z-index: -1;
+}
+
+.booking__background {
+  position: absolute;
+  display: block;
+  min-width: 100%;
+  min-height: 100%;
+  height: 575px;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: 0 -17px;
+  object-position: 0 -17px;
+}
+
+.booking__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 50px 60px;
+}
+
+.booking__description {
+  padding-bottom: 7px;
+}
+
+.booking h2 {
+  margin-top: 0;
+  margin-bottom: 7px;
+  font-size: 40px;
+  line-height: 150%;
+}
+
+.booking p {
+  margin: 0;
+  padding-right: 250px;
+  font-size: 18px;
+  line-height: 27px;
+}
+
+.booking br {
+  display: none;
+}
+
+.form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  max-width: 403px;
+  padding: 50px;
+  padding-top: 43px;
+  background-color: #011c40;
+}
+
+.form h3 {
+  margin-top: 0;
+  margin-bottom: 28px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+  color: #f9fbfd;
+}
+
+.form input {
+  margin-bottom: 20px;
+  padding: 11px 16px;
+  font-size: 14px;
+  line-height: 21px;
+  color: #011c40;
+  background-color: #f9fbfd;
+  border: none;
+}
+
+.form input::-webkit-input-placeholder {
+  color: rgba(1, 28, 64, 0.7);
+}
+
+.form input::-moz-placeholder {
+  color: rgba(1, 28, 64, 0.7);
+}
+
+.form input:-ms-input-placeholder {
+  color: rgba(1, 28, 64, 0.7);
+}
+
+.form input::-ms-input-placeholder {
+  color: rgba(1, 28, 64, 0.7);
+}
+
+.form input::placeholder {
+  color: rgba(1, 28, 64, 0.7);
+}
+
+.form__checkbox label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 30px;
+  font-size: 10px;
+  line-height: 13px;
+  color: #f9fbfd;
+}
+
+.form__checkbox input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  border: 0;
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+}
+
+.form__checkbox input:checked + .form__control-mark::before {
+  display: block;
+}
+
+.form__checkbox input.focus-visible:focus + .form__control-mark {
+  -webkit-box-shadow: 0 0 0 1px #011c40 inset;
+  box-shadow: 0 0 0 1px #011c40 inset;
+  outline: 1px solid #d8d8d9;
+}
+
+.form__control-mark {
+  position: relative;
+  width: 18px;
+  height: 18px;
+  margin-right: 5px;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  background-color: #f9fbfd;
+}
+
+.form__control-mark::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  display: none;
+  width: 12px;
+  height: 8px;
+  background-image: url("../img/sprite/checkbox.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.form button {
+  display: block;
+  padding: 10px;
+  padding-bottom: 12px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 21px;
+  text-align: center;
+  border: none;
+  color: #011c40;
+  cursor: pointer;
+  -webkit-transition: background-color, -webkit-box-shadow 0.3s ease;
+  transition: background-color, -webkit-box-shadow 0.3s ease;
+  -o-transition: background-color, box-shadow 0.3s ease;
+  transition: background-color, box-shadow 0.3s ease;
+  transition: background-color, box-shadow 0.3s ease, -webkit-box-shadow 0.3s ease;
+}
+
+.form button.focus-visible:focus {
   color: #f9fbfd;
   background-color: transparent;
   -webkit-box-shadow: 0 0 0 2px #f9fbfd inset;
@@ -1467,6 +1678,7 @@ html {
 
   .cruises__container {
     padding-top: 90px;
+    padding-bottom: 100px;
   }
 
   .cruises__list {
@@ -1476,11 +1688,14 @@ html {
 
   .cruises h2 {
     font-size: 26px;
-    margin-bottom: 49px;
+    margin-bottom: 48px;
+  }
+
+  .card__bg-wrapper {
+    height: 386px;
   }
 
   .card__background {
-    width: 309px;
     height: 386px;
   }
 
@@ -1492,6 +1707,29 @@ html {
   .card h3 {
     bottom: 28px;
     left: 35px;
+  }
+
+  .booking__container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding: 87px 129px 100px 130px;
+  }
+
+  .booking__description {
+    margin-bottom: 53px;
+    padding-bottom: 0;
+    text-align: center;
+  }
+
+  .booking h2 {
+    margin-bottom: 5px;
+    font-size: 34px;
+  }
+
+  .booking p {
+    padding: 0 20px;
   }
 }
 
@@ -1513,6 +1751,10 @@ html {
     width: 100%;
   }
 
+  .header {
+    min-height: 500px;
+  }
+
   .header__bg-wrapper {
     left: 50%;
     -webkit-transform: translateX(-50%);
@@ -1526,6 +1768,10 @@ html {
     height: 568px;
   }
 
+  .header__background--nojs {
+    height: 100%;
+  }
+
   .header__container {
     padding-top: 20px;
   }
@@ -1535,7 +1781,6 @@ html {
   }
 
   .nav__list {
-    display: none;
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
     gap: 10px;
@@ -1579,6 +1824,10 @@ html {
     height: 100%;
     background-color: transparent;
     z-index: -2;
+  }
+
+  .burger--open .burger__container {
+    min-height: 40px;
   }
 
   .burger--open .burger__wrapper {
@@ -1651,9 +1900,14 @@ html {
     display: none;
   }
 
+  .burger__list {
+    display: none;
+  }
+
   .burger__list--nojs {
     display: -ms-grid;
     display: grid;
+    padding-left: 20px;
   }
 
   .burger__list--nojs .nav__link {
@@ -1757,6 +2011,7 @@ html {
 
   .cruises__container {
     padding-top: 56px;
+    padding-bottom: 65px;
   }
 
   .cruises__list {
@@ -1779,6 +2034,54 @@ html {
     bottom: 18px;
     left: 25px;
   }
+
+  .booking__container {
+    padding: 59px 0 65px;
+  }
+
+  .booking__description {
+    margin-bottom: 33px;
+  }
+
+  .booking h2 {
+    margin-bottom: 14px;
+    font-size: 24px;
+    line-height: 130%;
+  }
+
+  .booking p {
+    font-size: 16px;
+    line-height: 22px;
+    padding: 0 10px;
+  }
+
+  .booking br {
+    display: block;
+  }
+
+  .form {
+    max-width: 100%;
+    padding: 34px 30px 40px;
+  }
+
+  .form h3 {
+    margin-bottom: 29px;
+    padding: 0 8px;
+    text-align: center;
+    line-height: 25px;
+  }
+
+  .form__checkbox label {
+    margin-bottom: 27px;
+    padding-right: 45px;
+    line-height: 12px;
+  }
+
+  .form__control-mark {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+  }
 }
 
 @media (max-width: 374px) {
@@ -1794,7 +2097,7 @@ html {
   }
 
   .nav__link:hover:not(.focus-visible) {
-    color: rgba(1, 28, 64, 0.7);
+    opacity: 0.6;
   }
 
   .footer__link:hover:not(.focus-visible) {
@@ -1810,6 +2113,13 @@ html {
   }
 
   .card__button:hover:not(.focus-visible) {
+    color: #f9fbfd;
+    background-color: transparent;
+    -webkit-box-shadow: 0 0 0 2px #f9fbfd inset;
+    box-shadow: 0 0 0 2px #f9fbfd inset;
+  }
+
+  .form button:hover:not(.focus-visible) {
     color: #f9fbfd;
     background-color: transparent;
     -webkit-box-shadow: 0 0 0 2px #f9fbfd inset;

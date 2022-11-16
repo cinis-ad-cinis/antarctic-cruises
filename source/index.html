@@ -14,13 +14,13 @@
         <div class="header__bg-wrapper">
           <picture>
             <source type="image/webp" srcset="./img/intro-bg.webp 1x, ./img/intro-bg@2x.webp 2x">
-            <img class="header__background" src="./img/intro-bg.jpg" srcset="./img/intro-bg@2x.jpg" width="1366" height="1025" alt="Пейзаж с ледниками Антарктики.">
+            <img class="header__background header__background--nojs" src="./img/intro-bg.jpg" srcset="./img/intro-bg@2x.jpg" width="1366" height="1025" alt="Пейзаж с ледниками Антарктики.">
           </picture>
         </div>
 
         <div class="burger">
           <div class="burger__close"></div>
-          <div class="header__container container">
+          <div class="header__container burger__container container">
             <div class="logo burger__logo">
               <a class="logo__link">
                 <svg class="logo__image burger__image" width="70" hight="38" viewBox="0 0 70 38" role="img">
@@ -80,7 +80,7 @@
           <div class="advantages__bg-wrapper">
             <picture>
               <source type="image/webp" srcset="./img/advantages-bg.webp 1x, ./img/advantages-bg@2x.webp 2x">
-              <img class="advantages__background" src="./img/advantages-bg.jpg" srcset="./img/advantages-bg@2x.jpg" width="1366" height="562" alt="Величественный пейзаж с айсбергами.">
+              <img class="advantages__background" src="./img/advantages-bg.jpg" srcset="./img/advantages-bg@2x.jpg" width="1366" height="860" alt="Величественный пейзаж с айсбергами.">
             </picture>
           </div>
           <div class="advantages__container container">
@@ -331,6 +331,40 @@
               </li>
 
             </ul>
+          </div>
+        </section>
+
+        <section class="booking" id="booking">
+          <div class="booking__bg-wrapper">
+            <picture>
+              <source type="image/webp" srcset="./img/booking-bg.webp 1x, ./img/booking-bg@2x.webp 2x">
+              <img class="booking__background" src="./img/booking-bg.jpg" srcset="./img/booking-bg@2x.jpg" width="1366" height="910" alt="Яркий пейзаж с голубым ледником.">
+            </picture>
+          </div>
+          <div class="container">
+            <div class="booking__container">
+              <div class="booking__description">
+                <h2>Раннее бронирование</h2>
+                <p>Забронируйте тур <br> за&nbsp;3-6 месяцев до&nbsp;даты выезда и&nbsp;сэкономьте до&nbsp;50%</p>
+              </div>
+              <form class="booking__form form" action="https://echo.htmlacademy.ru" method="post">
+                <h3>Оставьте заявку и&nbsp;мы&nbsp;свяжемся с&nbsp;вами в&nbsp;ближайшее время</h3>
+                <label for="name" class="visually-hidden">Имя</label>
+                <input type="text" name="name" id="name" placeholder="Имя" required>
+                <label for="phone" class="visually-hidden">Телефон</label>
+                <input type="tel" name="number" id="number" placeholder="Телефон" maxlength="30" pattern="\+?[0-9\s\-\(\)]+" required>
+                <label for="email" class="visually-hidden">Email</label>
+                <input type="email" name="email" id="email" placeholder="Email" required>
+                <div class="form__checkbox">
+                  <label for="agree">
+                    <input type="checkbox" name="agree" id="agree" checked required>
+                    <span class="form__control-mark"></span>
+                    <span>Я&nbsp;согласен на&nbsp;обработку моих персональных данных</span>
+                  </label>
+                </div>
+                <button type="submit">Оставить заявку</button>
+              </form>
+            </div>
           </div>
         </section>
 
