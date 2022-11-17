@@ -368,6 +368,40 @@
           </div>
         </section>
 
+        <section class="contacts" id="contacts">
+          <h2 class="visually-hidden">Контакты.</h2>
+          <div class="contacts__container container">
+            <div class="contacts__map" id="map-canvas">
+              <picture>
+                <source type="image/webp" srcset="./img/map.webp 1x, ./img/map@2x.webp 2x">
+                <img class="contacts__image" src="./img/map@2x.jpg" srcset="./img/map@2x.jpg" width="560" height="306" alt="Изображение карты с отметкой местонахождения компании.">
+              </picture>
+            </div>
+            <div class="contacts__description">
+              <p>У&nbsp;вас ещё остались вопросы или сомнения? Приезжайте к&nbsp;нам в&nbsp;офис и&nbsp;мы&nbsp;вам все расскажем.</p>
+              <ul class="contacts__list">
+                <li class="contacts__item">
+                  <a class="contacts__link contacts__link--map" href="#">
+                    <svg class="contacts__icon" width="18" hight="22" viewBox="0 0 18 22" role="img">
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="./img/sprite.svg#pin"></use>
+                    </svg>
+                    г. Санкт Петербург,<br> ул. Большая Конюшенная, 19/8
+                  </a>
+                </li>
+                <li class="contacts__item">
+                  <a class="contacts__link" href="tel:+78002000000">
+                    <svg class="contacts__icon" width="18" hight="18" viewBox="0 0 18 18" role="img">
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="./img/sprite.svg#phone"></use>
+                    </svg>
+                    8-800-200-00-00
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+        </section>
+
       </main>
 
       <footer class="footer">
@@ -429,35 +463,7 @@
       </footer>
     </div>
 
-    <!-- Модалки -->
-    <!-- <div class="modal modal--preload" data-modal="feedback">
-      <div class="modal__wrapper">
-        <div class="modal__overlay" data-close-modal></div>
-        <div class="modal__content">
-          <p class="modal__description">Обычная модалка</p>
-          <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
-            <svg width="15" height="15">
-              <use xlink:href="img/sprite.svg#icon-close"></use>
-            </svg>
-          </button>
-        </div>
-      </div>
-    </div>
-
-    <div class="modal modal--preload modal--fit-content modal--no-scale" data-modal="success">
-      <div class="modal__wrapper">
-        <div class="modal__overlay" data-close-modal></div>
-        <div class="modal__content">
-          <p class="modal__description">Размер этой модалки зависит от ширины контента,<br> отключена анимация-скейл</p>
-          <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
-            <svg width="15" height="15">
-              <use xlink:href="img/sprite.svg#icon-close"></use>
-            </svg>
-          </button>
-        </div>
-      </div>
-    </div> -->
-
+    <script src="https://api-maps.yandex.ru/2.1?apikey=c50f15d0-99b2-4f51-baf1-3dd0db79fd74&lang=ru_Ru"></script>
     <script src="js/vendor.min.js"></script>
     <script src="js/main.min.js"></script>
   </body>

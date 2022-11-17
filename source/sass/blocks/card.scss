@@ -10,6 +10,10 @@
   }
 }
 
+.card:focus-within .card__description {
+  z-index: auto;
+}
+
 .card__bg-wrapper {
   position: absolute;
   min-width: 100%;

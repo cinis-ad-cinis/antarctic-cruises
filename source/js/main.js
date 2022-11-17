@@ -5,6 +5,10 @@ import {initModals} from './modules/modals/init-modals';
 
 window.addEventListener('DOMContentLoaded', () => {
 
+  if (map) {
+    mapImage.classList.add('contacts__image--hide');
+    createMap();
+  }
   // Utils
   // ---------------------------------
 
@@ -25,6 +29,15 @@ const menu = menuContainer.querySelector('.burger__list');
 const links = document.querySelectorAll('.nav__link');
 const toggle = menuContainer.querySelector('.burger__toggle');
 const closingMenu = menuContainer.querySelector('.burger__close');
+const map = document.querySelector('#map-canvas');
+const mapImage = map.querySelector('.contacts__image');
+const ymaps = window.ymaps;
+const MAP_CENTER = [59.938667, 30.323073];
+const ZOOM = 19;
+const PIN_SIZE = [18, 22];
+const PIN_OFSET = [-18, -22];
+
+// Бургер-меню
 
 menu.classList.remove('burger__list--nojs');
 toggle.classList.remove('burger__toggle--nojs');
@@ -45,6 +58,27 @@ if (menuContainer) {
   closingMenu.addEventListener('click', removeMenu);
   links.forEach((el) => el.addEventListener('click', removeMenu));
 }
+
+// Яндекс.Карта
+
+const createMap = () => {
+  ymaps.ready(init);
+  function init() {
+    const newMap = new ymaps.Map(map, {
+      center: MAP_CENTER,
+      zoom: ZOOM,
+    });
+
+    const myPlacemark = new ymaps.Placemark(MAP_CENTER, {}, {
+      iconLayout: 'default#image',
+      iconImageHref: 'img/svg/pin.svg',
+      iconImageSize: PIN_SIZE,
+      iconImageOffset: PIN_OFSET,
+    });
+
+    newMap.geoObjects.add(myPlacemark);
+  }
+};
 
 
 // ---------------------------------

@@ -10,6 +10,16 @@
   height: 575px;
   background-color: $color-solitude;
   z-index: -1;
+
+  @include vp-1023 {
+    width: 1484px;
+    height: 810px;
+  }
+
+  @include vp-767 {
+    width: 1211px;
+    height: 760px;
+  }
 }
 
 .booking__background {
@@ -20,6 +30,18 @@
   height: 575px;
   object-fit: cover;
   object-position: 0 -17px;
+
+  @include vp-1023 {
+    width: 1484px;
+    height: 805px;
+    object-position: -504px -13px;
+  }
+
+  @include vp-767 {
+    width: 1211px;
+    height: 760px;
+    object-position: -485px -46px;
+  }
 }
 
 .booking__container {
@@ -67,7 +89,6 @@
     margin-bottom: 14px;
     font-size: 24px;
     line-height: 130%;
-
   }
 }
 
