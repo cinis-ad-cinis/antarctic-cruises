@@ -49,6 +49,7 @@
   font-size: 10px;
   line-height: 13px;
   color: $color-alice-blue;
+  cursor: pointer;
 
   @include vp-767 {
     margin-bottom: 27px;

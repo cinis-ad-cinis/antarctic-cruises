@@ -1402,6 +1402,7 @@ html {
   font-size: 10px;
   line-height: 13px;
   color: #f9fbfd;
+  cursor: pointer;
 }
 
 .form__checkbox input {
