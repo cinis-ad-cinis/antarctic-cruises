@@ -1,3 +1,9 @@
+.promo {
+  &--hidden {
+    display: none;
+  }
+}
+
 .promo__wrapper {
   padding-top: 196px;
   padding-bottom: 278px;

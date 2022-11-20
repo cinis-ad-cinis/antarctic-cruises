@@ -29,6 +29,7 @@ const menu = menuContainer.querySelector('.burger__list');
 const links = document.querySelectorAll('.nav__link');
 const toggle = menuContainer.querySelector('.burger__toggle');
 const closingMenu = menuContainer.querySelector('.burger__close');
+const promo = document.querySelector('.promo');
 const map = document.querySelector('#map-canvas');
 const mapImage = map.querySelector('.contacts__image');
 const ymaps = window.ymaps;
@@ -47,11 +48,13 @@ if (menuContainer) {
   const toggleMenu = () => {
     menuContainer.classList.toggle('burger--open');
     document.body.classList.toggle('scroll-lock');
+    promo.classList.toggle('promo--hidden');
   };
 
   const removeMenu = () => {
     menuContainer.classList.remove('burger--open');
     document.body.classList.remove('scroll-lock');
+    promo.classList.remove('promo--hidden');
   };
 
   toggle.addEventListener('click', toggleMenu);

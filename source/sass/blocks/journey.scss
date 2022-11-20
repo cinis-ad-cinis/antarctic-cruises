@@ -61,6 +61,7 @@
 
 .journey__image {
   display: block;
+  background-color: $color-quartz;
 
   @include vp-1023 {
     width: 324px;

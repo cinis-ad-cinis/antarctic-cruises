@@ -979,6 +979,10 @@ html {
   fill: currentColor;
 }
 
+.promo--hidden {
+  display: none;
+}
+
 .promo__wrapper {
   padding-top: 196px;
   padding-bottom: 278px;
@@ -1035,6 +1039,7 @@ html {
 
 .journey__image {
   display: block;
+  background-color: #d8d8d9;
 }
 
 .advantages {
@@ -1850,7 +1855,7 @@ html {
   }
 
   .contacts__link--map .contacts__icon {
-    margin-bottom: 15px;
+    margin-top: 5px;
   }
 }
 
@@ -2274,6 +2279,12 @@ html {
     background-color: transparent;
     -webkit-box-shadow: 0 0 0 2px #f9fbfd inset;
     box-shadow: 0 0 0 2px #f9fbfd inset;
+  }
+
+  .form__checkbox input:hover:not(.focus-visible) + .form__control-mark {
+    -webkit-box-shadow: 0 0 0 1px #011c40 inset;
+    box-shadow: 0 0 0 1px #011c40 inset;
+    outline: 1px solid #d8d8d9;
   }
 
   .form button:hover:not(.focus-visible) {

@@ -76,7 +76,7 @@
     }
   }
 
-  @include focus {
+  @include hover-focus {
     & + .form__control-mark {
       box-shadow: 0 0 0 1px $color-tangaroa inset;
       outline: 1px solid $color-quartz;
