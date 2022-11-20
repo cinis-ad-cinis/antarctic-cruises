@@ -48,13 +48,17 @@ if (menuContainer) {
   const toggleMenu = () => {
     menuContainer.classList.toggle('burger--open');
     document.body.classList.toggle('scroll-lock');
-    promo.classList.toggle('promo--hidden');
+    if (promo) {
+      promo.classList.toggle('promo--hidden');
+    }
   };
 
   const removeMenu = () => {
     menuContainer.classList.remove('burger--open');
     document.body.classList.remove('scroll-lock');
-    promo.classList.remove('promo--hidden');
+    if (promo) {
+      promo.classList.remove('promo--hidden');
+    }
   };
 
   toggle.addEventListener('click', toggleMenu);
