@@ -1953,7 +1953,11 @@ html {
   }
 
   .burger--open .burger__container {
-    min-height: 40px;
+    width: 100%;
+    height: 100vh;
+    background-color: #f9fbfd;
+    z-index: -2;
+    overflow: auto;
   }
 
   .burger--open .burger__wrapper {
@@ -1961,10 +1965,6 @@ html {
     top: 0;
     left: 0;
     padding: 75px 30px 15px 15px;
-    width: 100%;
-    height: 100vh;
-    background-color: #f9fbfd;
-    z-index: -2;
   }
 
   .burger--open .burger__toggle {
