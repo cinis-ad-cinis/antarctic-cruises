@@ -3,7 +3,7 @@
   min-height: 386px;
   overflow: hidden;
 
-  @include hover {
+  &:hover {
     & .card__description {
       z-index: auto;
     }
@@ -29,8 +29,9 @@
   position: absolute;
   top: 0;
   left: 0;
+  width: 100%;
+  min-height: 386px;
   height: 100%;
-  min-width: 100%;
   object-fit: cover;
   background-color: $color-tangaroa;
 

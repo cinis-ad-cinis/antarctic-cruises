@@ -83,6 +83,7 @@
 
 .contacts__link {
   display: flex;
+  width: fit-content;
   font-size: 16px;
   line-height: 150%;
   transition: color $trans-default;
